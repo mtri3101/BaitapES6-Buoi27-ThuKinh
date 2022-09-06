@@ -122,6 +122,15 @@ window.onload = () => {
   });
 };
 
+window.removeGlasses = (myBoolean)=>{
+  if(myBoolean === false){
+    document.querySelector("#avatar").querySelector('img').style.display = 'none';
+    document.querySelector("#glassesInfo").style.display = 'none';
+  }else{
+    document.querySelector("#glassesInfo").style.display = 'block';
+    document.querySelector("#avatar").querySelector('img').style.display = 'block';
+  }
+}
 
 
 let renderGlasses = (arrGlasses) => {
@@ -136,7 +145,3 @@ let renderGlasses = (arrGlasses) => {
   }
   document.querySelector("#vglassesList").innerHTML = html;
 };
-
-
-
-
